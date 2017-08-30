@@ -168,9 +168,10 @@ var has3d,
 	},
 
 	// Checks if a property belongs to an object
-
+        hasOwn = {}.hasOwnProperty,
+    
 	has = function(property, object) {
-		return Object.prototype.hasOwnProperty.call(object, property);
+		return hasOwn.call(object, property);
 	},
 
 	// Gets the CSS3 vendor prefix
